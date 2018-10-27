@@ -1,0 +1,18 @@
+.content input{
+}
+ul.list{
+list-style:none;
+padding:0px;
+margin:0px;
+overflow:hidden;
+}
+ul.list li{
+border:1px solid #EEE;
+padding:5px 10px;
+margin:0px;
+text-overflow:ellipsis; //溢出时变为省略
+overflow:hidden;
+}
+.lilight{
+background-color:#eaeaea;
+}

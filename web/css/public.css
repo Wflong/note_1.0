@@ -1,0 +1,31 @@
+.head_border{
+	border-bottom: solid 1px;
+	border-bottom-color: #CCC;
+	background: #FFFFFF;
+}
+
+.body_bg{
+	background: rgb(254,254,254);
+}
+
+#login_card{
+	background: rgba(255,255,255,0.87); 
+	color: rgb(80,80,80);
+}
+.login_title{
+	margin: -10px; 
+	padding-top: 20px; 
+	padding-bottom: 20px;
+	font-family: "microsoft yahei";
+	font-weight: bolder;
+	font-size: 26px;
+}
+.label_font{
+	font-family: "microsoft yahei";
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.head_line{
+	line-height: 60px;
+}

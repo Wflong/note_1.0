@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CIDE——注册</title>
+
+<link rel="stylesheet" href="css/bootstrap.css"> 
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/show.css">
+<style>
+body{
+	background: rgba(240,240,240,0.5);
+}
+canvas{
+	position: absolute;
+	z-index: -1;
+	background: #111;
+	width: 100%;
+}
+</style>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/show.js"></script>
+<script src="js/public.js"></script>
+</head>
+<body>
+	<div class="container-fluid" id="head_bar" >
+		<div class="row head_border  head_line">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="col-md-6 col-sm-3 float-left"><img src="img/logo.png" width="75px" class="img-thumbnail"></div>
+				<div class="col-md-6 col-sm-3 float-right text-md-right text-sm-left">欢迎使用CIDE</div>
+			</div>
+			<!-- <div class="col-lg-4 col-md-6 col-sm-3  offset-lg-4 text-lg-right text-md-right">欢迎登陆CIDE</div> -->
+		</div>
+	</div>
+		
+	<div id="bg">	
+		<div class="container-fluid"  style="padding: 0px;">
+			<canvas id="canvas"></canvas>
+			<div id="card" class="col-md-12 offset-md-0" style="padding-top: 3%; padding-bottom: 3%;" >
+				<div id="login_card" class="card col-lg-4 offset-lg-4 col-md-8 offset-md-2 col-sm-8 offset-sm-2" style="padding: 0px;">
+					<form name="sub_regist" id="sub_regist" action="index.html" onsubmit="return all_true()">
+					  <div class="form-group card-header">
+						<label for="title">
+							<p class="login_title">注册</p>
+						</label>
+					  </div>
+					  <div class="card-body">
+					  <div class="form-group">
+						<label for="un" class="label_font" >用户名:</label>
+						<input type="text" class="form-control" id="un" name="un" placeholder="用户名必须大于3个字符" onblur="un_true()">
+						<p id="un_show">&nbsp;</p>
+					  </div>
+					  <div class="form-group">
+						 <label for="un" class="label_font">邮箱:</label>
+						 <input type="email" class="form-control" id="email" name="email" onblur="email_true()" placeholder="邮箱">
+						 <ul class="list" style="position: absolute; z-index: 100; background: rgba(255,255,255,0.87);" ></ul>
+						 <p id="email_show">&nbsp;</p>
+					  </div>
+					  <div class="form-group">
+						<label for="pwd" class="label_font">密码：</label>
+						<input type="password" class="form-control" id="pwd" placeholder="密码为6-20位" onblur="pwd_true()">
+						<p id="pwd_show">&nbsp;</p>
+					  </div>
+					  <div class="form-group">
+						 <label for="pwd" class="label_font">确认密码：</label>
+						 <input type="password" class="form-control" id="pwd_1" placeholder="请再次输入密码" onblur="eq_true()">
+						 <p id="pwd_1_show">&nbsp;</p>
+					  </div>
+					  
+					  <button type="button" class="col-sm-3 offset-sm-1 col-md-3 col-lg-2 offset-md-2 offset-lg-3 btn btn-primary"
+						style="margin-bottom: 10px; margin-top: 10px;" onclick="window.location.href='login.html'"
+					  >
+						  登&nbsp;录
+					  </button>
+					  
+					  <button type="submit" class="col-sm-3 offset-sm-1 col-md-3 col-lg-2 offset-md-1 offset-lg-1 btn btn-primary"
+						style="margin-bottom: 10px; margin-top: 10px;"
+					  >提&nbsp;交</button>
+					  </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="high" class="d-md-none" style="height: 100px;"></div>
+	<div  class="text-center" style="padding-top: 20px; margin-bottom:0; color: #999;" id="tail_bar">
+		<p>Copyright © 2018-2019 版权归CIDE工作室所有</p>
+		<p>Email : unsc_work@163.com</p>
+	</div>
+	<script src="js/draw.js"></script>
+</body>
+</html>
